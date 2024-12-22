@@ -1,0 +1,18 @@
+services:
+  - name: transport-dashboard
+    type: web
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    plan: free
+    envVars:
+      - key: NEXT_PUBLIC_BACKEND_URL
+        value: http://localhost:3344 
+      - key: NEXTAUTH_SECRET
+        value: vasdvasdvas
+      - key: NEXTAUTH_URL
+        value: http://localhost:3000 
+      - key: NEXT_PUBLIC_CLOUDNAIRY_CLOUD_NAME
+        value: di6r722sv
+      - key: NEXT_PUBLIC_STRIPE_PUBLIC_KEY
+        value:
